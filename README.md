@@ -1,4 +1,4 @@
-flushy
+flushr
 ======
 
-Find me a toilet mobile app
+Find a toilet near you.
