@@ -7,7 +7,15 @@
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="small.css" />
 <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 700px)" ref="css/small.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(function() {
+	for(var i=0; i<5; i++) {
+	var li = $("#list li").clone();
+	$("#list ul").append(li);
+}
+});
+</script>
 </head>
 
 <body>
@@ -19,6 +27,19 @@
 
 <section id="viewOptions">
 	<button id="list_view_button" class="chosen_button">List</button><button id="map_view_button">Map</button>
+</section>
+
+<section id="list">
+	<ul>
+		<li>
+			<div>
+				<img src="images/f.png" alt="f" class="sign" />
+				<img src="images/pin.png" alt="pin" class="pin" height="50" />
+				<p class="distance">100ft away</p>
+				<p class="location">Building 4, 2nd floor</p>
+			</div>
+		</li>
+	</ul>
 </section>
 
 </body>

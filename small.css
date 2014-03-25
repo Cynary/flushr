@@ -119,3 +119,51 @@ p {
 	-moz-border-radius: 0px 10px 10px 0px; 
 	-webkit-border-radius: 0px 10px 10px 0px;
 }
+
+#list .sign {
+	width: 30px;
+}
+
+ul li, ul {
+	list-style: none outside none;
+}
+
+#list li {
+	background: #f3f0f7;
+	overflow: auto;
+	padding: 15px;
+	width: 250px;
+	margin: 0px auto;
+	margin-bottom: 5px;
+}
+
+#list li:first-child {
+	border-radius: 10px 10px 0px 1px; 
+	-moz-border-radius: 10px 10px 0px 1px; 
+	-webkit-border-radius: 10px 10px 0px 1px;
+}
+
+#list .sign {
+	float: left;
+}
+
+#list .distance {
+}
+
+#list .location {
+	font-weight: 700;
+}
+
+#list p {
+	font-family: "avenir", "helvetica", sans-serif;
+	text-align: left;
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
+#list .pin {
+	float: right;
+	vertical-align: middle;
+	margin-top: 5px;
+}
