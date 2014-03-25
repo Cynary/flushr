@@ -1,0 +1,63 @@
+
+body {
+	background: #e3e2de;
+	padding-top: 300px;
+}
+
+#logo {
+	margin: 0px auto;
+	display: block;
+	width: 700px;
+}
+
+p {
+	font-family: "Bookman Old Style", "Georgia", serif;
+	font-size: 35pt;
+	color: #656360;
+	text-align: center;
+}
+
+#genderSelector {
+	margin: 0px auto;
+	width: 660px;
+}
+
+#genderSelector a {
+	font-family: "Bookman Old Style", "Georgia", serif;
+	font-style: italic;
+	display: block;
+	float: left;
+	text-decoration: none;
+	font-size: 30pt;
+	color: #656360;
+	background: #f3f0f7;
+	text-align: center;
+	width: 210px;
+	height: 250px;
+	margin-right: 15px;
+	padding-top: 30px;
+	padding-bottom: 5px;
+}
+
+#genderSelector a#n {
+	font-size: 25pt;
+}
+
+#genderSelector a:first-child {
+	border-radius: 20px 0px 0px 20px; 
+	-moz-border-radius: 20px 0px 0px 20px; 
+	-webkit-border-radius: 20px 0px 0px 20px;
+}
+
+#genderSelector a:last-child {
+	margin-right: 0px;
+	border-radius: 0px 20px 20px 0px; 
+	-moz-border-radius: 0px 20px 20px 0px; 
+	-webkit-border-radius: 0px 20px 20px 0px;
+}
+
+#genderSelector img {
+	margin: 0px auto;
+	height: 150px;
+	display: block;
+}
