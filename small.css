@@ -1,25 +1,34 @@
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background: #e3e2de;
-	padding-top: 300px;
+}
+
+#index_c {
+	padding-top: 100px;
 }
 
 #logo {
 	margin: 0px auto;
 	display: block;
-	width: 700px;
+	width: 210px;
+	margin-bottom: 20px;
 }
 
 p {
 	font-family: "Bookman Old Style", "Georgia", serif;
-	font-size: 35pt;
 	color: #656360;
 	text-align: center;
+	font-size: 10pt;
 }
 
 #genderSelector {
-	margin: 0px auto;
-	width: 660px;
+	margin: 10px auto;
+	width: 290px;
 }
 
 #genderSelector a {
@@ -28,36 +37,85 @@ p {
 	display: block;
 	float: left;
 	text-decoration: none;
-	font-size: 30pt;
+	font-size: 12pt;
 	color: #656360;
 	background: #f3f0f7;
 	text-align: center;
-	width: 210px;
-	height: 250px;
-	margin-right: 15px;
-	padding-top: 30px;
-	padding-bottom: 5px;
+	padding: 5px 20px;
+	line-height: 20pt;
+	width: 55px;
+	margin-right: 2px;
 }
 
 #genderSelector a#n {
-	font-size: 25pt;
+	font-size: 9pt;
+	line-height: 1.1;
 }
 
 #genderSelector a:first-child {
-	border-radius: 20px 0px 0px 20px; 
-	-moz-border-radius: 20px 0px 0px 20px; 
-	-webkit-border-radius: 20px 0px 0px 20px;
+	border-radius: 10px 0px 0px 10px; 
+	-moz-border-radius: 10px 0px 0px 10px; 
+	-webkit-border-radius: 10px 0px 0px 10px;
 }
 
 #genderSelector a:last-child {
 	margin-right: 0px;
-	border-radius: 0px 20px 20px 0px; 
-	-moz-border-radius: 0px 20px 20px 0px; 
-	-webkit-border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 10px 10px 0px; 
+	-moz-border-radius: 0px 10px 10px 0px; 
+	-webkit-border-radius: 0px 10px 10px 0px;
 }
 
 #genderSelector img {
 	margin: 0px auto;
-	height: 150px;
+	height: 70px;
 	display: block;
+}
+
+#header {
+	position: relative;
+	background: #538fb6;
+	padding: 10px 0px;
+}
+
+#logo_small {
+	margin: 0px auto;
+	display: block;
+}
+
+#gear {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+}
+
+#viewOptions {
+	margin: 10px auto;
+	position: relative;
+	width: 120px;
+}
+
+#viewOptions button.chosen_button {
+	background: #477fa4;
+}
+
+#viewOptions button {
+	background: #538fb6;
+	color: #fff;
+	font-family: "avenir", "helvetica", sans-serif;
+	margin: 0;
+	border: 0;
+	padding: 5px 15px;
+	font-size: 12pt;
+}
+
+#list_view_button {
+	border-radius: 10px 0px 0px 10px; 
+	-moz-border-radius: 10px 0px 0px 10px; 
+	-webkit-border-radius: 10px 0px 0px 10px;
+}
+
+#map_view_button {
+	border-radius: 0px 10px 10px 0px; 
+	-moz-border-radius: 0px 10px 10px 0px; 
+	-webkit-border-radius: 0px 10px 10px 0px;
 }
