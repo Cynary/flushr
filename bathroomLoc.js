@@ -51,3 +51,11 @@ function sortBathrooms(callback) {
         callback(bathrooms)
     }
 }
+
+function showBathrooms(bathrooms) {
+    res = ''
+    for(var i in bathrooms) {
+        res += bathrooms[i].room + '\n'
+    }
+    alert(res)
+}
