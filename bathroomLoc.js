@@ -20,3 +20,5 @@ function showPosition(position) {
 function getBaths(loc) {
     alert(loc);
 }
+
+getLocation();
