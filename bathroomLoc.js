@@ -18,7 +18,7 @@ function showPosition(position) {
 }
 
 function getBaths(loc) {
-    alert(loc);
+    alert(loc.latitude + ' ' + loc.longitude);
 }
 
 getLocation();
