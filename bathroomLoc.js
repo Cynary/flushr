@@ -1,6 +1,12 @@
 // Calculate spherical distance; from
 // http://stackoverflow.com/questions/13840516/how-to-find-my-distance-to-a-known-location-in-javascript
 function distance(lon1, lat1, alt1, lon2, lat2, alt2) {
+    lon1 = Number(lon1)
+    lon2 = Number(lon2)
+    lat1 = Number(lat1)
+    lat2 = Number(lat2)
+    alt1 = Number(alt1)
+    alt2 = Number(alt2)
     var R = 6371; // Radius of the earth in km
     var dLat = (lat2-lat1).toRad();  // Javascript functions in radians
     var dLon = (lon2-lon1).toRad();
