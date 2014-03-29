@@ -38,8 +38,8 @@ bathrooms = [
 
 myPosition = {
     "coords": {
-        latitude: 42.359912
-        longitude: -71.090829
+        latitude: 42.359912,
+        longitude: -71.090829,
         altitude: 110
     }
 }
