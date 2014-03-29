@@ -22,8 +22,6 @@ if (typeof(Number.prototype.toRad) === "undefined") {
     }
 }
 
-bathrooms = JSON.parse(bathrooms)
-
 function getBathrooms(callback) {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(sortBathrooms(callback));
