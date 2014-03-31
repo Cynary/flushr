@@ -17,7 +17,7 @@ function distance(lon1, lat1, alt1, lon2, lat2, alt2) {
     var d = R * c; // Distance in km
 
     // let's take altitude into account
-    d = Math.sqrt(d*d + (alt1-alt2)*(alt1-alt2))
+    d = Math.sqrt(d*d + (alt1-alt2)*(alt1-alt2)/1e6)
     return d;
 }
 
