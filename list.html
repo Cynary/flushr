@@ -12,13 +12,26 @@
 <script src="bathroomLoc.js"></script>
 <script>
 $(function() {
-	for(var i=0; i<5; i++) {
-	var li = $("#list li").clone();
-	$("#list ul").append(li);
+
+function getGetOrdinal(n) {
+   var s=["th","st","nd","rd"],
+       v=n%100;
+   return n+(s[(v-20)%10]||s[v]||s[0]);
 }
 
 function printBathrooms(bathrooms) {
-	console.log(bathrooms);
+	for(var i=0; i<bathrooms.length; i++) {
+		var bathroom = bathrooms[i];
+		var html = '<li>' +
+			'<div>'+
+				'<img src="images/'+bathroom.bath_type.toLowerCase()+'.png" alt="'+bathroom.bath_type.toLowerCase()+'" class="sign" />'+
+				'<img src="images/pin.png" alt="pin" class="pin" height="50" />' +
+				'<p class="distance">'+bathroom.distance+'ft away</p>' + 
+				'<p class="location">Building '+bathroom.room.split("-")[0]+', '+getGetOrdinal(parseInt(bathroom.room.split("-")[1][0]))+' floor</p>' +
+			'</div>' +
+		'</li>';
+		$("#list ul").append(html);
+	}
 }
 
 getBathrooms(printBathrooms);
@@ -43,14 +56,6 @@ getBathrooms(printBathrooms);
 
 <section id="list">
 	<ul>
-		<li>
-			<div>
-				<img src="images/f.png" alt="f" class="sign" />
-				<img src="images/pin.png" alt="pin" class="pin" height="50" />
-				<p class="distance">100ft away</p>
-				<p class="location">Building 4, 2nd floor</p>
-			</div>
-		</li>
 	</ul>
 </section>
 

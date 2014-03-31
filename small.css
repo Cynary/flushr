@@ -138,9 +138,15 @@ ul li, ul {
 }
 
 #list li:first-child {
-	border-radius: 10px 10px 0px 1px; 
-	-moz-border-radius: 10px 10px 0px 1px; 
-	-webkit-border-radius: 10px 10px 0px 1px;
+	border-radius: 10px 10px 1px 1px; 
+	-moz-border-radius: 10px 10px 1px 1px; 
+	-webkit-border-radius: 10px 10px 1px 1px;
+}
+
+#list li:last-child {
+	border-radius: 1px 1px 10px 10px; 
+	-moz-border-radius: 1px 1px 10px 10px;
+	-webkit-border-radius: 1px 1px 10px 10px;
 }
 
 #list .sign {

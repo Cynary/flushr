@@ -38,14 +38,20 @@ function getBathrooms(callback) {
 
 function sortBathrooms(callback) {
     return function(position) {
-        var altitude = position.coords.altitude
-        var latitude = position.coords.latitude
-        var longitude = position.coords.longitude
+        var altitude = position.coords.altitude || 0;
+        var latitude = position.coords.latitude || 0;
+        var longitude = position.coords.longitude || 0;
+		
+		for(var i=0; i<bathrooms.length; i++) {
+			bathrooms[i].distance = distance(longitude,latitude,altitude,bathrooms[i].longitude,bathrooms[i].latitude,bathrooms[i].altitude)
+		}
+		
         bathrooms.sort(function(bath1, bath2) {
-            var dist1 = distance(longitude,latitude,altitude,
-                                 bath1.longitude,bath1.latitude,bath1.altitude)
-            var dist2 = distance(longitude,latitude,altitude,
-                                 bath2.longitude,bath2.latitude,bath2.altitude)
+            //var dist1 = distance(longitude,latitude,altitude,bath1.longitude,bath1.latitude,bath1.altitude)
+            //var dist2 = distance(longitude,latitude,altitude,bath2.longitude,bath2.latitude,bath2.altitude)
+			var dist1 = bath1.distance;
+			var dist2 = bath2.distance;
+								
             return dist1-dist2
         })
         callback(bathrooms)
