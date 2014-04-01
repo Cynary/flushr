@@ -19,7 +19,7 @@ function getGetOrdinal(n) {
    return n+(s[(v-20)%10]||s[v]||s[0]);
 }
 
-function printBathrooms(bathrooms) {
+function printBathrooms(bathrooms, coords) {
 	for(var i=0; i<bathrooms.length; i++) {
 		var bathroom = bathrooms[i];
 		var html = '<li>' +

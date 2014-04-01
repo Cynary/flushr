@@ -32,7 +32,7 @@ function getBathrooms(callback) {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(sortBathrooms(callback));
     } else {
-        callback(bathrooms)
+        callback(bathrooms, {latitude:0,longitude:0,accuracy:0,altitude:0,altitudeAccuracy:0,heading:0,speed:0})
     }
 }
 
@@ -54,11 +54,11 @@ function sortBathrooms(callback) {
 								
             return dist1-dist2
         })
-        callback(bathrooms)
+        callback(bathrooms,position.coords)
     }
 }
 
-function showBathrooms(bathrooms) {
+function showBathrooms(bathrooms, position) {
     res = ''
     for(var i in bathrooms) {
         res += bathrooms[i].room + '\n'
