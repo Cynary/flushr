@@ -24,10 +24,10 @@ function printBathrooms(bathrooms) {
 		var bathroom = bathrooms[i];
 		var html = '<li>' +
 			'<div>'+
-				'<img src="images/'+bathroom.bath_type.toLowerCase()+'.png" alt="'+bathroom.bath_type.toLowerCase()+'" class="sign" />'+
+				'<img src="images/'+bathroom.bath_type.toLowerCase()+'.png" alt="'+bathroom.bath_type.toLowerCase()+'" class="sign '+bathroom.bath_type.toLowerCase()+'" />'+
 				'<img src="images/pin.png" alt="pin" class="pin" height="50" />' +
-				'<p class="distance">'+bathroom.distance+'ft away</p>' + 
-				'<p class="location">Building '+bathroom.room.split("-")[0]+', '+getGetOrdinal(parseInt(bathroom.room.split("-")[1][0]))+' floor</p>' +
+				'<p class="distance">'+Math.round(bathroom.distance * 3280.84)+'ft away</p>' + 
+				'<p class="location">Building '+bathroom.room.split("-")[0]+', Room '+bathroom.room+'</p>' +
 			'</div>' +
 		'</li>';
 		$("#list ul").append(html);

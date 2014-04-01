@@ -153,6 +153,10 @@ ul li, ul {
 	float: left;
 }
 
+#list .sign.n {
+	margin-top: 10px;
+}
+
 #list .distance {
 }
 

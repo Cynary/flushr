@@ -4,7 +4,7 @@ bathrooms = [
         "latitude" : "42.359200",
         "longitude": "-71.092902",
         "altitude" : "110",
-        "bath_type"     : "M",
+        "bath_type"     : "F",
     },
     {
         "room"     : "3-101",
@@ -18,7 +18,7 @@ bathrooms = [
         "latitude" : "42.359717",
         "longitude": "-71.091675",
         "altitude" : "110",
-        "bath_type"     : "M",
+        "bath_type"     : "N",
     },
     {
         "room"     : "8-113",
