@@ -22,19 +22,36 @@ function getGetOrdinal(n) {
 function printBathrooms(bathrooms, coords) {
 	for(var i=0; i<bathrooms.length; i++) {
 		var bathroom = bathrooms[i];
-		var html = '<li>' +
+		var html = '<li class="bathroom_'+i+'">' +
 			'<div>'+
 				'<img src="images/'+bathroom.bath_type.toLowerCase()+'.png" alt="'+bathroom.bath_type.toLowerCase()+'" class="sign '+bathroom.bath_type.toLowerCase()+'" />'+
 				'<img src="images/pin.png" alt="pin" class="pin" height="50" />' +
 				'<p class="distance">'+Math.round(bathroom.distance * 3280.84)+'ft away</p>' + 
 				'<p class="location">Building '+bathroom.room.split("-")[0]+', Room '+bathroom.room+'</p>' +
+				'<section class="mapholder"></section>' +
 			'</div>' +
 		'</li>';
 		$("#list ul").append(html);
+		
+		$(".bathroom_" + i + " .pin").click({bathroom: bathroom}, function(e) {
+			$(".bathroom_location_map").remove();
+			$(this).parent().children(".mapholder").html(getMap(e.data.bathroom.latitude, 
+																e.data.bathroom.longitude));
+		});
 	}
 }
 
 getBathrooms(printBathrooms);
+
+function getMap(latitude, longitude)
+{
+var latlon = latitude + "," + longitude;
+
+var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
++latlon+"&zoom=17&size=248x200&sensor=false&markers=color:red%7C"+latitude+","+longitude;
+
+return "<img class='bathroom_location_map' alt='map' src='"+img_url+"'>";
+}
 
 });
 
@@ -53,7 +70,6 @@ getBathrooms(printBathrooms);
 <section id="viewOptions">
 	<button id="list_view_button" class="chosen_button">List</button><button id="map_view_button">Map</button>
 </section>
-
 <section id="list">
 	<ul>
 	</ul>

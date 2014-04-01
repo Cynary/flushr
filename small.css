@@ -170,10 +170,16 @@ ul li, ul {
 	position: relative;
 	top: 10px;
 	left: 10px;
+	width: 80%;
 }
 
 #list .pin {
 	float: right;
 	vertical-align: middle;
 	margin-top: 5px;
+}
+
+.bathroom_location_map {
+	margin-top: 10px;
+	border: 1px solid #aaa;
 }
